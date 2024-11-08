@@ -58,3 +58,10 @@ solution, improving overall convergence. The base model was tested using both
 the doc stride setting and the learning rate scheduler.
 Additionally, another pretrained model, deepset/bert-base-cased-squad 2,
 was evaluated to compare its performance with base - model.
+
+Conclusion: 
+The assessment of the base model, distilbert-base-uncased, along with its improved versions on the SQuAD dataset under various noise levels, revealed several important findings:
+Setting a doc_stride to 128 contributed to moderate increase in F1 scores across all three noise levels,  which implies that this adjustment helped the model handle extended passages more effectively.
+Implementing learning rate decay with an exponential factor of 2e-2 again boosted F1 scores, particularly in noisier environments, suggests that this rate adjustment enhanced the model's fine-tuning capability in difficult conditions.
+Among the models evaluated, the deepset/bert-base-cased-squad2 pretrained model showed the best performance, achieving the maximum F1 score and the minimal Word Error Rate (WER) in scenarios without noise, marking it as the leading model in this study.
+
